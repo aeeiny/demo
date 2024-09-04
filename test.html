@@ -40,8 +40,8 @@
             flex-wrap: wrap;
         }
         ol li {
-            margin-right: 15px;
-            margin-bottom: 5px;
+            margin-right: 20px;
+            margin-bottom: 10px;
             list-style-position: inside;
         }
         hr {
@@ -104,7 +104,8 @@
         }
         .light-button {
 		    display: inline-block;
-		    padding: 14px 0;
+		    padding: 15px 10px;
+		    box-sizing: border-box;
 		    margin: 10px 0 20px;
 		    width: 100%;
 		    font-size: 16px;
@@ -127,7 +128,8 @@
 		}
 		.black-button a {
 		    display: inline-block;
-		    padding: 12px 0;
+		    padding: 15px 10px;
+		    box-sizing: border-box;
 		    margin: 10px 0;
 		    width: 100%;
 		    font-size: 16px;
@@ -234,7 +236,7 @@
 
    <h2 id="4">4. Ford Focus</h2>
     <div class="car-block">
-        <img src="https://s1.auto.drom.ru/photo/v2/DAOa1N1YGL-pWwbSrDPsUTNiA8QRAhmvGbIMsXzrHO7yjTKO93-P4m2CYQBGUJPgcd1WLzhPBxG1gfJt/gen1200.jpg" alt="Ford Focus">
+        <img src="https://s1.auto.drom.ru/photo/v2/RUJBILaTpCkhxHD0_c-k3o4ssDN28PFHbJa3998RVMrKGVYiftX25MZbCdJG4tM517XABl1QkZsXO0Ah/gen1200.jpg" alt="Ford Focus">
         <div class="car-info">
             <span>Мнения владельцев о Ford Focus</span>
             <a href="https://www.drom.ru/reviews/ford/focus/5kopeek/?utm_source=first_auto_selection_pdd_article">13 097 коротких отзывов</a>
@@ -251,9 +253,8 @@
         	</ul>
        	<hr>
             <ul class="icon-list">
-            	<li class="plus">Надёжный мотор, коробка , да и в принципе, сборка и кузов, 315 000 км бега поломок не было серьезныха</li>
+            	<li class="plus">Надёжный мотор, коробка , да и в принципе, сборка и кузов, 315 000 км бега поломок не было серьезны</li>
             	<li class="minus">Не нашел</li>
-            	<li class="repair">Не было</li>
         	</ul>
         <a class="light-button" href="https://auto.drom.ru/ford/focus/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Ford Focus на Дроме</a>
     </div>
@@ -303,14 +304,15 @@
         	</ul>
        	<hr>
             <ul class="icon-list">
-            	<li class="plus">При езде каждый день по городу, полного бака хватает на 5-7дней. Машина ведёт себя спокойно на дороге, через все сугробы прорывается без проблем.</li>
-            	<li class="minus">В горку едет туговато, если во время не разгонишься</li>
-            	<li class="repair">Ходовка - замена в среднем раз в год</li>
+            	<li class="plus">Компактный. Малый радиус разворота. Высокая для седана. Мягкая обшивка салона, не скрипит. Простая дешевая подвеска.</li>
+            	<li class="minus">Их нет</li>
+            	<li class="repair">Первая капиталка на пробеге 550 тысяч километров.</li>
         	</ul>
         <a class="light-button" href="https://auto.drom.ru/toyota/corolla/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Toyota Corolla на Дроме</a>
     </div>
 
     <p>Предложили мало моделей? Или не нашли то, что вам нравится? Заходите на Дром и найдите свое первое авто из более чем 600 тысяч объявлений.</p>
+    <p>Вы сможете сразу узнавать о новых объявлениях в подписках, искать авто без рекламы и использовать темную тему.</p>
 
     <div id="app-link" href="#" class="black-button">Скачать приложение</div>
 
@@ -338,15 +340,15 @@
             const appLinkElement = document.getElementById('app-link');
 
         if (platform === 'iOS') {
-            appLinkElement.innerHTML = `<a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать в App Store</a>`;
+            appLinkElement.innerHTML = `<a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать приложение в App Store</a>`;
         } else if (platform === 'Android') {
-            appLinkElement.innerHTML = `<a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать в Google Play</a>`;
+            appLinkElement.innerHTML = `<a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать приложение в Google Play</a>`;
 
         } else {
             // Если платформа не определена
             appLinkElement.innerHTML = `
-                <a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать в App Store</a>
-                <a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать в Google Play</a>
+                <a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать приложение в App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать приложение в Google Play</a>
             `;
         }
         }
