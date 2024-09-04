@@ -1,352 +1,386 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Недорогое первое авто – какие есть варианты?</title>
-    <style>        
-    	html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 0;
-            padding: 15px;
-            background-color: #FFF;
-            color: #333;
-        }
-        h1 {
-            font-size: 32px;
-            line-height: 40px;
-            margin-bottom: 20px;
-        }        
-        h2 {
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
-        a {
-            color: #1B75CC;
-            text-decoration: none;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ol {
-            padding-left: 0;
-            list-style-type: decimal;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        ol li {
-            margin-right: 20px;
-            margin-bottom: 10px;
-            list-style-position: inside;
-        }
-        hr {
-	    border-top: 1px solid #DDD;
-	    border-bottom: none;
-            border-left: none;
-            border-right: none;
-        }
-        .car-block {
-            margin-top: 20px;
-        }
-        .car-block h2 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-        .car-block img {
-            width: 100%;
-            height: 240px;
-            border-radius: 8px;
-	    object-fit: cover;
-            display: block;
-        }
-        .car-info {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            font-size: 14px;
-            line-height: 18px;
-            color: #999;
-            font-weight: normal;
-        }
-        .car-info span {
-	    margin-right: 20px;
-        }
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
 
-        .icon-list {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 20px;
-        }
-        .icon-list li {
-            margin-bottom: 10px;
-            padding-left: 34px; /* Adjust according to icon size */
-            background-repeat: no-repeat;
-            background-position: left -2px;
-            background-size: 24px 24px;
-            display: flex;
-            align-items: center;
-            line-height: 22px;
-        }
-        .icon-list .plus {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" fill="%2384B63E" clip-rule="evenodd" d="M12 5.5C12.8284 5.5 13.5 6.17157 13.5 7V10.5H17C17.8284 10.5 18.5 11.1716 18.5 12C18.5 12.8284 17.8284 13.5 17 13.5H13.5V17C13.5 17.8284 12.8284 18.5 12 18.5C11.1716 18.5 10.5 17.8284 10.5 17L10.5 13.5H7C6.17157 13.5 5.5 12.8284 5.5 12C5.5 11.1716 6.17157 10.5 7 10.5H10.5V7C10.5 6.17157 11.1716 5.5 12 5.5Z"/></svg>');
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 15px;
+        background-color: #FFF;
+        color: #333;
+      }
 
-        }
-        .icon-list .minus {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" fill="%23DB001A" clip-rule="evenodd" d="M18.5 12C18.5 12.8284 17.8284 13.5 17 13.5H7C6.17157 13.5 5.5 12.8284 5.5 12C5.5 11.1716 6.17157 10.5 7 10.5H17C17.8284 10.5 18.5 11.1716 18.5 12Z"/></svg>');
-        }
-        .icon-list .repair {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" fill="black" clip-rule="evenodd" d="M15.3151 6.75815C15.8031 6.27014 15.6489 5.44839 14.9646 5.35842C13.6252 5.18232 12.2218 5.6088 11.1928 6.63784C9.98471 7.84589 9.6071 9.56991 10.0599 11.1005C10.1802 11.5069 10.1128 11.9604 9.81311 12.2601L7.18214 14.8911C6.59635 15.4769 6.59635 16.4266 7.18214 17.0124C7.76792 17.5982 8.71767 17.5982 9.30346 17.0124L11.9344 14.3815C12.2341 14.0818 12.6876 14.0144 13.094 14.1346C14.6247 14.5875 16.3487 14.2099 17.5567 13.0018C18.5858 11.9728 19.0122 10.5693 18.8361 9.22996C18.7462 8.5457 17.9244 8.39146 17.4364 8.87947L15.4357 10.8802C15.4356 10.8803 15.4358 10.8801 15.4357 10.8802C14.8499 11.466 13.8999 11.4663 13.3141 10.8805C12.7283 10.2947 12.7283 9.34495 13.3141 8.75916C13.3142 8.75906 13.314 8.75927 13.3141 8.75916L15.3151 6.75815Z"/></svg>');
-        }
-        .light-button {
-	    display: inline-block;
-	    padding: 15px 10px;
-	    box-sizing: border-box;
-	    margin: 10px 0 20px;
-	    width: 100%;
-	    font-size: 16px;
-	    color: black;
-	    text-decoration: none;
-	    background-color: #E8F1FA; 
-	    border-radius: 6px; 
-	    text-align: center;
-	}
-	.light-button:hover {
-	    background-color: #D6ECFF; 
-	}
-	.light-button:active {
-	    background-color: #D6ECFF;
-	}
-	.black-button {
-	    margin: 0 0 40px;
-	}
-	.black-button a {
-	    display: inline-block;
-	    padding: 15px 10px;
-	    box-sizing: border-box;
-	    margin: 10px 0;
-	    width: 100%;
-	    font-size: 16px;
-	    color: white;
-	    text-decoration: none;
-	    background-color: black; 
-	    border-radius: 6px; 
-	    text-align: center;
-	}
+      h1 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: #1B75CC;
+        text-decoration: none;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      ol {
+        padding-left: 0;
+        list-style-type: decimal;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      ol li {
+        margin-right: 20px;
+        margin-bottom: 10px;
+        list-style-position: inside;
+      }
+
+      hr {
+        border-top: 1px solid #DDD;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+      }
+
+      .car-block {
+        margin-top: 20px;
+      }
+
+      .car-block h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .car-block img {
+        width: 100%;
+        height: 240px;
+        border-radius: 8px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .car-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        color: #999;
+        font-weight: normal;
+      }
+
+      .car-info span {
+        margin-right: 20px;
+      }
+
+      .icon-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 20px;
+      }
+
+      .icon-list li {
+        margin-bottom: 10px;
+        padding-left: 34px;
+        /* Adjust according to icon size */
+        background-repeat: no-repeat;
+        background-position: left -2px;
+        background-size: 24px 24px;
+        display: flex;
+        align-items: center;
+        line-height: 22px;
+      }
+
+      .icon-list .plus {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" fill="%2384B63E" clip-rule="evenodd" d="M12 5.5C12.8284 5.5 13.5 6.17157 13.5 7V10.5H17C17.8284 10.5 18.5 11.1716 18.5 12C18.5 12.8284 17.8284 13.5 17 13.5H13.5V17C13.5 17.8284 12.8284 18.5 12 18.5C11.1716 18.5 10.5 17.8284 10.5 17L10.5 13.5H7C6.17157 13.5 5.5 12.8284 5.5 12C5.5 11.1716 6.17157 10.5 7 10.5H10.5V7C10.5 6.17157 11.1716 5.5 12 5.5Z"/></svg>');
+
+      }
+
+      .icon-list .minus {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" fill="%23DB001A" clip-rule="evenodd" d="M18.5 12C18.5 12.8284 17.8284 13.5 17 13.5H7C6.17157 13.5 5.5 12.8284 5.5 12C5.5 11.1716 6.17157 10.5 7 10.5H17C17.8284 10.5 18.5 11.1716 18.5 12Z"/></svg>');
+      }
+
+      .icon-list .repair {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" fill="black" clip-rule="evenodd" d="M15.3151 6.75815C15.8031 6.27014 15.6489 5.44839 14.9646 5.35842C13.6252 5.18232 12.2218 5.6088 11.1928 6.63784C9.98471 7.84589 9.6071 9.56991 10.0599 11.1005C10.1802 11.5069 10.1128 11.9604 9.81311 12.2601L7.18214 14.8911C6.59635 15.4769 6.59635 16.4266 7.18214 17.0124C7.76792 17.5982 8.71767 17.5982 9.30346 17.0124L11.9344 14.3815C12.2341 14.0818 12.6876 14.0144 13.094 14.1346C14.6247 14.5875 16.3487 14.2099 17.5567 13.0018C18.5858 11.9728 19.0122 10.5693 18.8361 9.22996C18.7462 8.5457 17.9244 8.39146 17.4364 8.87947L15.4357 10.8802C15.4356 10.8803 15.4358 10.8801 15.4357 10.8802C14.8499 11.466 13.8999 11.4663 13.3141 10.8805C12.7283 10.2947 12.7283 9.34495 13.3141 8.75916C13.3142 8.75906 13.314 8.75927 13.3141 8.75916L15.3151 6.75815Z"/></svg>');
+      }
+
+      .light-button {
+        display: inline-block;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        margin: 10px 0 20px;
+        width: 100%;
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        background-color: #E8F1FA;
+        border-radius: 6px;
+        text-align: center;
+      }
+
+      .light-button:hover {
+        background-color: #D6ECFF;
+      }
+
+      .light-button:active {
+        background-color: #D6ECFF;
+      }
+
+      .black-button {
+        margin: 0 0 40px;
+      }
+
+      .black-button a {
+        display: inline-block;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        margin: 10px 0;
+        width: 100%;
+        font-size: 16px;
+        color: white;
+        text-decoration: none;
+        background-color: black;
+        border-radius: 6px;
+        text-align: center;
+      }
+      
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Недорогое первое авто – какие есть варианты?</h1>
     <p>Как понять, плюсы и минусы своей будущей машины? Как разобраться в ценах и особенностях эксплуатации авто?</p>
     <p>Мы собрали для вас отзывы опытных владельцев о машинах, которые чаще всего выбирают себе в качестве первой начинающие автолюбители. Отзывы расскажут о достоинствах и недостатках, укажут на нюансы владения и помогут сделать свой выбор.</p>
     <ol>
-        <li><a href="#1">Лада Приора</a></li>
-        <li><a href="#2">Лада Гранта</a></li>
-        <li><a href="#3">Daewoo Nexia</a></li>
-        <li><a href="#4">Ford Focus</a></li>
-        <li><a href="#5">Mitsubishi Lancer</a></li>
-        <li><a href="#6">Toyota Corolla</a></li>
+      <li>
+        <a href="#1">Лада Приора</a>
+      </li>
+      <li>
+        <a href="#2">Лада Гранта</a>
+      </li>
+      <li>
+        <a href="#3">Daewoo Nexia</a>
+      </li>
+      <li>
+        <a href="#4">Ford Focus</a>
+      </li>
+      <li>
+        <a href="#5">Mitsubishi Lancer</a>
+      </li>
+      <li>
+        <a href="#6">Toyota Corolla</a>
+      </li>
     </ol>
 
-   <h2 id="1">1. Лада Приора</h2>
+    <h2 id="1">1. Лада Приора</h2>
     <div class="car-block">
-        <img src="https://s1.auto.drom.ru/photo/v2/uZC4rscKfFRHFrnZxVYi1RRDHpjJdIxiDGfeHv5uN_r7k7DIDhCZ89V9wiOgqxUaSuGmohkMNsjXqrL3/gen1200.jpg" alt="Лада Приора">
-        <div class="car-info">
-            <span>Мнения владельцев о&nbsp;Лада&nbsp;Приора</span>
-            <a href="https://www.drom.ru/reviews/lada/priora/5kopeek/?utm_source=first_auto_selection_pdd_article">9&nbsp;685 коротких отзыва</a>
-        </div>
-        	<ul class="icon-list">
-            	<li class="plus">Хороший, неприхотливый автомобиль. Верой и правдой отслужил 13 лет...</li>
-            	<li class="minus">Отсутствие штатной хоть какой-то шумоизоляции</li>
-            	<li class="repair">Стабильно каждые 30000 пробега замена радиатора печки</li>
-        	</ul>
-        <hr>
-            <ul class="icon-list">
-            	<li class="plus">Резвая, дешевое обслуживание</li>
-            	<li class="minus">Если не следить за кузовом, быстро наступит коррозия</li>
-            	<li class="repair">Все чинится легко и быстро</li>
-        	</ul>
-       	<hr>
-            <ul class="icon-list">
-            	<li class="plus">Экономичный, едет достойно! Управляемость на ура!</li>
-            	<li class="minus">Шумка плохая заводская, нужны доработки самим владельцем</li>
-            	<li class="repair">Стойки оригинальные слабенькие</li>
-        	</ul>
-        <a class="light-button" href="https://auto.drom.ru/lada/priora/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Лада Гранта на Дроме</a>
+      <img src="https://s1.auto.drom.ru/photo/v2/uZC4rscKfFRHFrnZxVYi1RRDHpjJdIxiDGfeHv5uN_r7k7DIDhCZ89V9wiOgqxUaSuGmohkMNsjXqrL3/gen1200.jpg" alt="Лада Приора">
+      <div class="car-info">
+        <span>Мнения владельцев о&nbsp;Лада&nbsp;Приора</span>
+        <a href="https://www.drom.ru/reviews/lada/priora/5kopeek/?utm_source=first_auto_selection_pdd_article">9&nbsp;685 коротких отзыва</a>
+      </div>
+      <ul class="icon-list">
+        <li class="plus">Хороший, неприхотливый автомобиль. Верой и правдой отслужил 13 лет...</li>
+        <li class="minus">Отсутствие штатной хоть какой-то шумоизоляции</li>
+        <li class="repair">Стабильно каждые 30000 км пробега замена радиатора печки</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Резвая, дешевое обслуживание</li>
+        <li class="minus">Если не следить за кузовом, быстро наступит коррозия</li>
+        <li class="repair">Все чинится легко и быстро</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Экономичный, едет достойно! Управляемость на ура!</li>
+        <li class="minus">Шумка плохая заводская, нужны доработки самим владельцем</li>
+        <li class="repair">Стойки оригинальные слабенькие</li>
+      </ul>
+      <a class="light-button" href="https://auto.drom.ru/lada/priora/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Лада Гранта на Дроме</a>
     </div>
 
-   <h2 id="2">2. Лада Гранта</h2>
+    <h2 id="2">2. Лада Гранта</h2>
     <div class="car-block">
-        <img src="https://s1.auto.drom.ru/photo/v2/q57th7Uv4FzEQ6x_2rcuxZ-Xze8OsFHscScDmjzIPYbPvUxxzX6QyzabiZHstKPodeqzYboJtnj_6IPC/gen1200.jpg" alt="Лада Гранта">
-        <div class="car-info">
-            <span>Мнения владельцев о&nbsp;Лада&nbsp;Гранта</span>
-            <a href="https://www.drom.ru/reviews/lada/granta/5kopeek/?utm_source=first_auto_selection_pdd_article">6&nbsp;686 коротких отзывов</a>
-        </div>
-        	<ul class="icon-list">
-            	<li class="plus">Надежный и экономный авто на каждый день</li>
-            	<li class="minus">Плохо светят фары</li>
-            	<li class="repair">Ничего, все отлично за 45.000 км только замена масла и фильтров</li>
-        	</ul>
-        <hr>
-            <ul class="icon-list">
-            	<li class="plus">Надежность, простота в обслуживание. В каждом уголке центральной России ее починят в любом гараже, всегда есть запчасти в наличии</li>
-            	<li class="minus">Лишена комфорта</li>
-            	<li class="repair">За время эксплуатации были только мелкие поломки (катушка зажигания, натяжитель ремня навесного оборудования)</li>
-        	</ul>
-       	<hr>
-            <ul class="icon-list">
-            	<li class="plus">За время эксплуатации ни разу не подводила, с пункта А пункт Б довозила прекрасн, авто подходит как для начинающих так и профессионалов</li>
-            	<li class="minus">Нет датчика температура на приборной панели</li>
-        	</ul>
-        <a class="light-button" href="https://auto.drom.ru/lada/granta/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Лада Приора на Дроме</a>
+      <img src="https://s1.auto.drom.ru/photo/v2/q57th7Uv4FzEQ6x_2rcuxZ-Xze8OsFHscScDmjzIPYbPvUxxzX6QyzabiZHstKPodeqzYboJtnj_6IPC/gen1200.jpg" alt="Лада Гранта">
+      <div class="car-info">
+        <span>Мнения владельцев о&nbsp;Лада&nbsp;Гранта</span>
+        <a href="https://www.drom.ru/reviews/lada/granta/5kopeek/?utm_source=first_auto_selection_pdd_article">6&nbsp;686 коротких отзывов</a>
+      </div>
+      <ul class="icon-list">
+        <li class="plus">Надежный и экономный авто на каждый день</li>
+        <li class="minus">Плохо светят фары</li>
+        <li class="repair">Ничего, все отлично, за 45000 км только замена масла и фильтров</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Надежность, простота в обслуживание. В каждом уголке центральной России ее починят в любом гараже, всегда есть запчасти в наличии</li>
+        <li class="minus">Лишена комфорта</li>
+        <li class="repair">За время эксплуатации были только мелкие поломки (катушка зажигания, натяжитель ремня навесного оборудования)</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">За время эксплуатации ни разу не подводила, с пункта А в пункт Б довозила прекраснр, авто подходит как для начинающих так и профессионалов</li>
+        <li class="minus">Нет датчика температура на приборной панели</li>
+      </ul>
+      <a class="light-button" href="https://auto.drom.ru/lada/granta/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Лада Приора на Дроме</a>
     </div>
 
-   <h2 id="3">3. Daewoo Nexia</h2>
+    <h2 id="3">3. Daewoo Nexia</h2>
     <div class="car-block">
-        <img src="https://s1.auto.drom.ru/photo/v2/z4NNpkonWmKjrz8kLy7IIH8e66URIq31WLjtqG9O3Gke8hyOuW36fzf5feWRPObgbDXzQbag90dst2cl/gen1200.jpg" alt="Daewoo Nexia">
-        <div class="car-info">
-            <span>Мнения владельцев о&nbsp;Daewoo&nbsp;Nexia</span>
-            <a href="https://www.drom.ru/reviews/daewoo/nexia/5kopeek/?utm_source=first_auto_selection_pdd_article">4&nbsp;953 коротких отзыва</a>
-        </div>
-        	<ul class="icon-list">
-            	<li class="plus">Надежный автомобиль, за 13 лет не подводила в дороге.</li>
-            	<li class="minus">Плохая оптика</li>
-            	<li class="repair">При своевременном обслуживание их нет</li>
-        	</ul>
-        <hr>
-            <ul class="icon-list">
-            	<li class="plus">Ремонтопригоден. Заводится в любой мороз, ломается редко. И не критично.</li>
-            	<li class="minus">В этом ценовом сегменте их нет... Лучше и надежнее ваза...</li>
-            	<li class="repair">Почти ничего особо не сломалось... Все что делал - делал для своего комфорта. Но можно было и так ездить.</li>
-        	</ul>
-       	<hr>
-            <ul class="icon-list">
-            	<li class="plus">Шустрая, эргономичная подвеска</li>
-            	<li class="minus">Салон старый и неудобный</li>
-            	<li class="repair">Ремонт стартера. Замена гранат. За полгода поломок было минимум.</li>
-        	</ul>
-        <a class="light-button" href="https://auto.drom.ru/daewoo/nexia/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Daewoo Nexia на Дроме</a>
+      <img src="https://s1.auto.drom.ru/photo/v2/z4NNpkonWmKjrz8kLy7IIH8e66URIq31WLjtqG9O3Gke8hyOuW36fzf5feWRPObgbDXzQbag90dst2cl/gen1200.jpg" alt="Daewoo Nexia">
+      <div class="car-info">
+        <span>Мнения владельцев о&nbsp;Daewoo&nbsp;Nexia</span>
+        <a href="https://www.drom.ru/reviews/daewoo/nexia/5kopeek/?utm_source=first_auto_selection_pdd_article">4&nbsp;953 коротких отзыва</a>
+      </div>
+      <ul class="icon-list">
+        <li class="plus">Надежный автомобиль, за 13 лет не подводила в дороге</li>
+        <li class="minus">Плохая оптика</li>
+        <li class="repair">При своевременном обслуживание их нет</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Ремонтопригоден. Заводится в любой мороз, ломается редко. И не критично.</li>
+        <li class="minus">В этом ценовом сегменте их нет... Лучше и надежнее ваза...</li>
+        <li class="repair">Почти ничего особо не сломалось... Все что делал - делал для своего комфорта. Но можно было и так ездить.</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Шустрая, эргономичная подвеска</li>
+        <li class="minus">Салон старый и неудобный</li>
+        <li class="repair">Ремонт стартера, замена гранат. За полгода поломок было минимум.</li>
+      </ul>
+      <a class="light-button" href="https://auto.drom.ru/daewoo/nexia/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Daewoo Nexia на Дроме</a>
     </div>
 
-   <h2 id="4">4. Ford Focus</h2>
+    <h2 id="4">4. Ford Focus</h2>
     <div class="car-block">
-        <img src="https://s1.auto.drom.ru/photo/v2/OwUvC-O5B8-1mlnWcslfX9EBJNrNTBLo-glrjrgY58QghYB8ddprtzflR5ahnkeOXyc9rT954KlgHW_l/gen1200.jpg" alt="Ford Focus">
-        <div class="car-info">
-            <span>Мнения владельцев о&nbsp;Ford&nbsp;Focus</span>
-            <a href="https://www.drom.ru/reviews/ford/focus/5kopeek/?utm_source=first_auto_selection_pdd_article">13&nbsp;097 коротких отзывов</a>
-        </div>
-        	<ul class="icon-list">
-            	<li class="plus">Хороший семейный бюджетный автомобиль</li>
-            	<li class="minus">Не хватает полного привода</li>
-            	<li class="repair">При своевременном обслуживании серьёзных проблем не доставляет</li>
-        	</ul>
-        <hr>
-            <ul class="icon-list">
-            	<li class="plus"> Легок в обслуживании. Запчасти стоят недорого, в автомобиле практически нечему ломаться.</li>
-            	<li class="minus">Мне ничего не доставляло каких-то неудобств.</li>
-        	</ul>
-       	<hr>
-            <ul class="icon-list">
-            	<li class="plus">Надёжный мотор, коробка , да и в принципе, сборка и кузов, 315 000 км бега поломок не было серьезны</li>
-            	<li class="minus">Не нашел</li>
-        	</ul>
-        <a class="light-button" href="https://auto.drom.ru/ford/focus/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Ford Focus на Дроме</a>
+      <img src="https://s1.auto.drom.ru/photo/v2/OwUvC-O5B8-1mlnWcslfX9EBJNrNTBLo-glrjrgY58QghYB8ddprtzflR5ahnkeOXyc9rT954KlgHW_l/gen1200.jpg" alt="Ford Focus">
+      <div class="car-info">
+        <span>Мнения владельцев о&nbsp;Ford&nbsp;Focus</span>
+        <a href="https://www.drom.ru/reviews/ford/focus/5kopeek/?utm_source=first_auto_selection_pdd_article">13&nbsp;097 коротких отзывов</a>
+      </div>
+      <ul class="icon-list">
+        <li class="plus">Хороший семейный бюджетный автомобиль</li>
+        <li class="minus">Не хватает полного привода</li>
+        <li class="repair">При своевременном обслуживании серьёзных проблем не доставляет</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus"> Легок в обслуживании. Запчасти стоят недорого, в автомобиле практически нечему ломаться.</li>
+        <li class="minus">Ничего не доставляло неудобств</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Надёжный мотор, коробка, да и, в принципе, сборка и кузов, 315000 км пробега поломок не было серьезных</li>
+        <li class="minus">Не нашел</li>
+      </ul>
+      <a class="light-button" href="https://auto.drom.ru/ford/focus/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Ford Focus на Дроме</a>
     </div>
 
-   <h2 id="5">5. Mitsubishi Lancer</h2>
+    <h2 id="5">5. Mitsubishi Lancer</h2>
     <div class="car-block">
-        <img src="https://s1.auto.drom.ru/photo/v2/2FnsVi_S_imLp4dX5l8ZUSYWyLkaP0_BT0GJianeRkZhhhLXgh7NoPyih6oV0q_W6ZR5HzmmsXnvsyDw/gen1200.jpg" alt="Mitsubishi Lancer">
-        <div class="car-info">
-            <span>Мнения владельцев о&nbsp;Mitsubishi&nbsp;Lancer</span>
-            <a href="https://www.drom.ru/reviews/mitsubishi/lancer/5kopeek/?utm_source=first_auto_selection_pdd_article">7&nbsp;893 коротких отзыва</a>
-        </div>
-        	<ul class="icon-list">
-            	<li class="plus">Надёжный. Недорогой по запчастям, простой в обслуживании, комфортный.</li>
-            	<li class="minus">Устаревший дизайн</li>
-            	<li class="repair">Не было</li>
-        	</ul>
-        <hr>
-            <ul class="icon-list">
-            	<li class="plus">Доступное обслуживание</li>
-            	<li class="minus">Полного бака хватает на 1000км по трассе</li>
-            	<li class="repair">Плохой АКБ</li>
-        	</ul>
-       	<hr>
-            <ul class="icon-list">
-            	<li class="plus">Хорошая управляемость, относительно качественный кузов и салон</li>
-            	<li class="minus">Хотелось бы больше мощности, дорогие оригинальные запчасти</li>
-            	<li class="repair">Ничего существенного</li>
-        	</ul>
-        <a class="light-button" href="https://auto.drom.ru/mitsubishi/lancer/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Mitsubishi Lancer на Дроме</a>
+      <img src="https://s1.auto.drom.ru/photo/v2/2FnsVi_S_imLp4dX5l8ZUSYWyLkaP0_BT0GJianeRkZhhhLXgh7NoPyih6oV0q_W6ZR5HzmmsXnvsyDw/gen1200.jpg" alt="Mitsubishi Lancer">
+      <div class="car-info">
+        <span>Мнения владельцев о&nbsp;Mitsubishi&nbsp;Lancer</span>
+        <a href="https://www.drom.ru/reviews/mitsubishi/lancer/5kopeek/?utm_source=first_auto_selection_pdd_article">7&nbsp;893 коротких отзыва</a>
+      </div>
+      <ul class="icon-list">
+        <li class="plus">Надёжный. Недорогой по запчастям, простой в обслуживании, комфортный.</li>
+        <li class="minus">Устаревший дизайн</li>
+        <li class="repair">Не было</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Доступное обслуживание</li>
+        <li class="minus">Полного бака хватает на 1000 км по трассе</li>
+        <li class="repair">Плохой АКБ</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Хорошая управляемость, относительно качественный кузов и салон</li>
+        <li class="minus">Хотелось бы больше мощности, дорогие оригинальные запчасти</li>
+        <li class="repair">Ничего существенного</li>
+      </ul>
+      <a class="light-button" href="https://auto.drom.ru/mitsubishi/lancer/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Mitsubishi Lancer на Дроме</a>
     </div>
 
-   <h2 id="6">6. Toyota Corolla</h2>
+    <h2 id="6">6. Toyota Corolla</h2>
     <div class="car-block">
-        <img src="https://s1.auto.drom.ru/photo/v2/HjiwLRr9Ry-3yx5jZcHxEQXr4HHBWPtI_NlMLApw-Le_b2WvGS3oUfhLEHvpnwvIqlU6nAeGHDX_hzA4/gen1200.jpg" alt="Toyota Corolla">
-        <div class="car-info">
-            <span>Мнения владельцев о&nbsp;Toyota&nbsp;Corolla</span>
-            <a href="https://www.drom.ru/reviews/toyota/corolla/5kopeek/?utm_source=first_auto_selection_pdd_article">20&nbsp;674 коротких отзыва</a>
-        </div>
-        	<ul class="icon-list">
-            	<li class="plus">Хороший и очень надежный автомобиль. Экономичный. За 9 лет владения ни разу не подвёл! Отдаю ему должное!</li>
-            	<li class="minus">Габариты, но для города самое то</li>
-        	</ul>
-        <hr>
-            <ul class="icon-list">
-            	<li class="plus">Неприхотливый авто с огромным запасом прочности, мягкая подвеска, надежный двигатель</li>
-            	<li class="minus">Болячки стандартные - мутнеют фары, ржавеет горловина бака</li>
-        	</ul>
-       	<hr>
-            <ul class="icon-list">
-            	<li class="plus">Компактный. Малый радиус разворота. Высокая для седана. Мягкая обшивка салона, не скрипит. Простая дешевая подвеска.</li>
-            	<li class="minus">Их нет</li>
-            	<li class="repair">Первая капиталка на пробеге 550 тысяч километров.</li>
-        	</ul>
-        <a class="light-button" href="https://auto.drom.ru/toyota/corolla/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Toyota Corolla на Дроме</a>
+      <img src="https://s1.auto.drom.ru/photo/v2/HjiwLRr9Ry-3yx5jZcHxEQXr4HHBWPtI_NlMLApw-Le_b2WvGS3oUfhLEHvpnwvIqlU6nAeGHDX_hzA4/gen1200.jpg" alt="Toyota Corolla">
+      <div class="car-info">
+        <span>Мнения владельцев о&nbsp;Toyota&nbsp;Corolla</span>
+        <a href="https://www.drom.ru/reviews/toyota/corolla/5kopeek/?utm_source=first_auto_selection_pdd_article">20&nbsp;674 коротких отзыва</a>
+      </div>
+      <ul class="icon-list">
+        <li class="plus">Хороший и очень надёжный автомобиль. Экономичный. За 9 лет владения ни разу не подвёл! Отдаю ему должное!</li>
+        <li class="minus">Габариты, но для города самое то</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Неприхотливый авто с огромным запасом прочности, мягкая подвеска, надежный двигатель</li>
+        <li class="minus">Болячки стандартные - мутнеют фары, ржавеет горловина бака</li>
+      </ul>
+      <hr>
+      <ul class="icon-list">
+        <li class="plus">Компактный. Малый радиус разворота. Высокая для седана. Мягкая обшивка салона, не скрипит. Простая дешевая подвеска.</li>
+        <li class="minus">Их нет</li>
+        <li class="repair">Первая капиталка на пробеге 550 тысяч километров.</li>
+      </ul>
+      <a class="light-button" href="https://auto.drom.ru/toyota/corolla/?maxprice=500000&minyear=2000&pts=2&damaged=2&unsold=1&utm_source=first_auto_selection_pdd_article">Смотреть Toyota Corolla на Дроме</a>
     </div>
 
     <p>Предложили мало моделей? Или не нашли то, что вам нравится? Заходите на Дром и найдите свое первое авто из более чем 600 тысяч объявлений.</p>
     <p>Вы сможете сразу узнавать о новых объявлениях в подписках, искать авто без рекламы и использовать темную тему.</p>
-
     <div id="app-link" href="#" class="black-button">Скачать приложение</div>
-
     <script>
-        // Функция для определения платформы
-        function detectPlatform() {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera
-            // Определение iOS
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                return 'iOS';
-            }
-            // Определение Android
-            if (/android/i.test(userAgent)) {
-                return 'Android';
-            }
-            return 'other';
+
+      function detectPlatform() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        // Определение iOS
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          return 'iOS';
         }
-        // Установка ссылки в зависимости от платформы
-        function setAppLink() {
-            const platform = detectPlatform();
-            const appLinkElement = document.getElementById('app-link');
+        // Определение Android
+        if (/android/i.test(userAgent)) {
+          return 'Android';
+        }
+        return 'other';
+      }
 
+      function setAppLink() {
+        const platform = detectPlatform();
+        const appLinkElement = document.getElementById('app-link');
         if (platform === 'iOS') {
-            appLinkElement.innerHTML = `<a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать приложение в App Store</a>`;
+          appLinkElement.innerHTML = `
+			<a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать приложение в App Store</a>`;
         } else if (platform === 'Android') {
-            appLinkElement.innerHTML = `<a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать приложение в Google Play</a>`;
-
+          appLinkElement.innerHTML = `
+			<a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать приложение в Google Play</a>`;
         } else {
-            // Если платформа не определена
-            appLinkElement.innerHTML = `
-                <a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать приложение в App Store</a>
-                <a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать приложение в Google Play</a>
+
+          appLinkElement.innerHTML = `
+			<a href="https://itunes.apple.com/app/apple-store/id1043371985">Скачать приложение в App Store</a>
+			<a href="https://play.google.com/store/apps/details?id=ru.farpost.dromfilter">Скачать приложение в Google Play</a>
             `;
         }
-        }
-        setAppLink();
+      }
+      setAppLink();
     </script>
-</body>
+  </body>
 </html>
