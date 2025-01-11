@@ -27,7 +27,8 @@
       height: 80%;
       padding: 10px;
       box-sizing: border-box;
-      font-size: 14px;
+      border: none;
+      font-size: 16px;
       font-family: Arial, sans-serif;
       line-height: 1.6;
     }
@@ -38,8 +39,9 @@
       cursor: pointer;
     }
     .result {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.6;
+      white-space: pre-wrap;
     }
   </style>
 </head>
@@ -76,8 +78,14 @@
       }
     }
 
-    // Process each word in the text
-    const processedText = textInput.split(/\s+/).map(word => processWord(word)).join(' ');
+// Process each line and preserve paragraphs
+    const processedText = textInput
+      .split(/\n/) // Split by newline
+      .map(line => line
+        .split(/\s+/) // Split by spaces within a line
+        .map(word => processWord(word))
+        .join(' ') // Join words back into a line
+      ).join('\n'); // Join lines back into paragraphs
 
     // Display the result
     output.innerHTML = processedText;
