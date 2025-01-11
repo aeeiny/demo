@@ -64,8 +64,9 @@
     // Function to process each word
     function processWord(word) {
       // Remove punctuation from the end of the word for processing
-      const punctuation = word.match(/[.,!?]$/) ? word.slice(-1) : '';
-      const baseWord = punctuation ? word.slice(0, -1) : word;
+      const punctuationMatch = word.match(/[.,!?]+$/);
+      const punctuation = punctuationMatch ? punctuationMatch[0] : '';
+      const baseWord = punctuation ? word.slice(0, -punctuation.length) : word;
 
       if (baseWord.length === 3) {
         return `<b>${baseWord[0]}</b>${baseWord.slice(1)}${punctuation}`;
